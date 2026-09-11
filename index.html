@@ -1,7 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="서울대학교 첨단융합학부 이도윤의 개인 홈페이지입니다.">
+  <title>이도윤 | Personal Page</title>
+  <style>
+    :root { --ink:#132238; --muted:#5d6a7b; --blue:#1769d3; --pale-blue:#eaf3ff; --line:#dce5ef; --paper:#f8fafc; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--paper); font-family:"Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", system-ui, sans-serif; line-height:1.65; }
+    .wrap { width:min(100% - 2.5rem, 68rem); margin:0 auto; }
+    header { position:relative; overflow:hidden; color:white; background:var(--ink); padding:1.25rem 0 5.5rem; }
+    header::after { content:""; position:absolute; right:-3rem; bottom:-5rem; width:20rem; height:20rem; opacity:.42; background-image:radial-gradient(circle, #5da5ff 1.5px, transparent 1.7px); background-size:1.2rem 1.2rem; transform:rotate(18deg); }
+    nav { display:flex; justify-content:space-between; align-items:center; position:relative; z-index:1; }
+    .brand { color:white; font-weight:700; text-decoration:none; letter-spacing:.02em; }
+    .nav-link { color:#cddcf0; font-size:.92rem; text-decoration:none; }
+    .nav-link:hover { color:white; }
+    .hero { position:relative; z-index:1; padding-top:5.8rem; }
+    .eyebrow { margin:0 0 .7rem; color:#8fc0ff; font-size:.9rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+    h1 { margin:0; font-size:clamp(2.7rem, 8vw, 5.4rem); letter-spacing:-.06em; line-height:1.05; }
+    .hero p { max-width:34rem; margin:1.35rem 0 0; color:#d9e5f4; font-size:clamp(1.05rem, 2.5vw, 1.25rem); }
+    main { position:relative; margin-top:-2.6rem; padding-bottom:3rem; }
+    .grid { display:grid; grid-template-columns:1.1fr .9fr; gap:1.25rem; }
+    .card { background:white; border:1px solid var(--line); border-radius:1.1rem; padding:clamp(1.5rem, 4vw, 2.5rem); box-shadow:0 12px 35px rgba(19, 34, 56, .07); }
+    .intro { grid-column:1 / -1; }
+    h2 { margin:0 0 1rem; font-size:1.2rem; letter-spacing:-.03em; }
+    .intro p { max-width:44rem; margin:0; color:var(--muted); font-size:1.05rem; }
+    .interest { display:flex; align-items:center; gap:1rem; }
+    .chip { flex:0 0 auto; display:grid; width:3.4rem; height:3.4rem; place-items:center; color:var(--blue); background:var(--pale-blue); border-radius:.9rem; font-size:1.6rem; }
+    .interest p, .contact p { margin:0; color:var(--muted); }
+    .interest strong { display:block; font-size:1.1rem; }
+    .email { display:inline-block; margin-top:.8rem; color:var(--blue); font-weight:700; overflow-wrap:anywhere; text-decoration-thickness:1px; text-underline-offset:.18em; }
+    .email:hover { color:#0d4fa5; }
+    footer { padding:1.5rem 0 2.5rem; color:var(--muted); font-size:.88rem; text-align:center; }
+    @media (max-width:40rem) { header { padding-bottom:4.5rem; } .hero { padding-top:4rem; } .grid { grid-template-columns:1fr; } .card { border-radius:.9rem; } }
+  </style>
+</head>
 <body>
-    <h1>안녕하세요, 제 홈페이지입니다</h1>
-    <p>GitHub Pages로 만들었습니다!</p>
+  <header>
+    <div class="wrap">
+      <nav aria-label="주요 메뉴"><a class="brand" href="#top">DOYOON LEE</a><a class="nav-link" href="#contact">Contact</a></nav>
+      <div class="hero" id="top"><p class="eyebrow">Personal Page</p><h1>이도윤</h1><p>서울대학교 첨단융합학부 26학번.<br>배우고 탐구하며, 더 나은 기술의 가능성을 찾습니다.</p></div>
+    </div>
+  </header>
+  <main class="wrap">
+    <div class="grid">
+      <section class="card intro" aria-labelledby="about-title"><h2 id="about-title">소개</h2><p>서울대학교 첨단융합학부에서 새로운 분야를 폭넓게 탐색하고 있습니다. 기술이 사람들의 삶에 자연스럽게 스며드는 순간에 관심이 많습니다.</p></section>
+      <section class="card" aria-labelledby="interest-title"><h2 id="interest-title">관심사</h2><div class="interest"><div class="chip" aria-hidden="true">⌘</div><div><strong>반도체</strong><p>미래 기술을 가능하게 하는 작은 회로와 큰 가능성에 관심이 있습니다.</p></div></div></section>
+      <section class="card contact" id="contact" aria-labelledby="contact-title"><h2 id="contact-title">연락처</h2><p>궁금한 점이나 함께 나누고 싶은 이야기가 있다면 편하게 연락해 주세요.</p><a class="email" href="mailto:bobster03@snu.ac.kr">bobster03@snu.ac.kr</a></section>
+    </div>
+  </main>
+  <footer>© 2026 이도윤. All rights reserved.</footer>
 </body>
 </html>
